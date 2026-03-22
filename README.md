@@ -1,16 +1,79 @@
-# React + Vite
+#  Tic Tac Toe – Full Stack Multiplayer Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern full-stack Tic Tac Toe application featuring real-time multiplayer, AI gameplay, and persistent user scores.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
 
-## React Compiler
+* Real-time multiplayer using Socket.IO
+* Single-player mode with AI (Easy / Medium / Hard)
+* User authentication (Register & Restore)
+* Persistent score tracking with MongoDB
+* Responsive UI with modern design
+* Fully deployed (Frontend + Backend)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend:** React, Vite
+* **Backend:** Node.js, Express
+* **Database:** MongoDB Atlas
+* **Realtime:** Socket.IO
+* **Deployment:** Vercel (Frontend), Render (Backend)
+
+---
+
+##  Project Structure
+
+```
+project/
+├── frontend/   # React app
+├── backend/    # Express server + APIs
+```
+
+---
+
+## ⚙️ Environment Variables
+
+### Backend (.env)
+
+```
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+```
+
+### Frontend (.env)
+
+```
+VITE_BACKEND_URL=https://your-backend.onrender.com
+```
+
+---
+
+##  Run Locally
+
+### Backend
+
+```
+cd backend
+npm install
+npm start
+```
+
+### Frontend
+
+```
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+##  Live Demo
+
+* Frontend: https://your-app.vercel.app
+* Backend: https://your-backend.onrender.com
+
