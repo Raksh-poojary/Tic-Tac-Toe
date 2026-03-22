@@ -1,21 +1,21 @@
-# 🎮 Tic Tac Toe – Full Stack Multiplayer Game
+#  Tic Tac Toe – Full Stack Multiplayer Game
 
 A modern full-stack Tic Tac Toe application featuring real-time multiplayer, AI gameplay, and persistent user scores.
 
 ---
 
-## 🚀 Features
+##  Features
 
-* 🔁 Real-time multiplayer using Socket.IO
-* 🤖 Single-player mode with AI (Easy / Medium / Hard)
-* 🔐 User authentication (Register & Restore)
-* 📊 Persistent score tracking with MongoDB
-* 🎨 Responsive UI with modern design
-* 🌐 Fully deployed (Frontend + Backend)
+* Real-time multiplayer using Socket.IO
+* Single-player mode with AI (Easy / Medium / Hard)
+* User authentication (Register & Restore)
+* Persistent score tracking with MongoDB
+* Responsive UI with modern design
+* Fully deployed (Frontend + Backend)
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Frontend:** React, Vite
 * **Backend:** Node.js, Express
@@ -25,7 +25,7 @@ A modern full-stack Tic Tac Toe application featuring real-time multiplayer, AI 
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 project/
@@ -52,7 +52,7 @@ VITE_BACKEND_URL=https://your-backend.onrender.com
 
 ---
 
-## ▶️ Run Locally
+##  Run Locally
 
 ### Backend
 
@@ -72,21 +72,8 @@ npm run dev
 
 ---
 
-## 🌍 Live Demo
+##  Live Demo
 
 * Frontend: https://your-app.vercel.app
 * Backend: https://your-backend.onrender.com
 
----
-
-## 📌 Future Improvements
-
-* Leaderboard system
-* JWT authentication
-* UI animations & sound effects
-
----
-
-## 👨‍💻 Author
-
-Raksh Poojary
