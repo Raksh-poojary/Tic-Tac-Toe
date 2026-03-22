@@ -4,13 +4,13 @@ const router = express.Router();
 
 // Register
 router.post("/register", async (req, res) => {
-    const { username, password } = req.body;
+    const { username, password,xScore=0,oScore=0 } = req.body;
 
     const exists = await UserScore.findOne({ username });
     if (exists)
         return res.status(409).json({ msg: "Username already exists" });
 
-    await UserScore.create({ username, password });
+    await UserScore.create({ username, password,xScore,oScore});
     res.json({ msg: "Registered successfully" });
 });
 
@@ -19,7 +19,9 @@ router.post("/restore", async (req, res) => {
     const { username, password } = req.body;
 
     const user = await UserScore.findOne({ username });
-    if (!user || user.password !== password)
+    if (!user)
+        return res.status(404).json({ msg: "User not found" });
+    if (user.password !== password)
         return res.status(401).json({ msg: "Invalid credentials" });
 
     res.json({ xScore: user.xScore, oScore: user.oScore });

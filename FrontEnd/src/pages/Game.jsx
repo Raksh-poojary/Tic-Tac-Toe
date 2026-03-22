@@ -212,8 +212,8 @@ function Game(modes) {
                         if (authType === "register") {
                             const res = await registerUser(username, password);
 
-                            if (res.msg === "Username already exists") {
-                                return { error: "Username already exists" };
+                            if (!res || res.msg === "Username already exists") {
+                                return { error:res?.msg || "Username already exists" };
                             }
 
                             setCurrentUser({ username, password });
@@ -223,8 +223,8 @@ function Game(modes) {
                         if (authType === "restore") {
                             const res = await restoreUser(username, password);
 
-                            if (res.msg === "Invalid credentials") {
-                                return { error: "Incorrect username or password" };
+                            if (!res || res.msg === "Invalid credentials" || res.msg=== "User not found") {
+                                return { error:res?.msg || "Incorrect username or password" };
                             }
 
                             setXScore(res.xScore);

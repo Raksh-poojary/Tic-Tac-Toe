@@ -18,6 +18,10 @@ mongoose.connect(process.env.MONGO_URI);
 app.use("/api/user", scoreRoutes);
 app.use("/api/bot", botRoutes);
 
+app.get("/api/user/health", (req, res) => {
+    res.json({ status: "ok" });
+});
+
 const boards = {}; // roomId -> board
 const starters = {};
 const server = http.createServer(app);
