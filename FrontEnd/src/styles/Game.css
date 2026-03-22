@@ -385,7 +385,41 @@ input:focus {
             rgb(97, 116, 122),
             rgba(143, 179, 143, 1));
 }
+.loading-container{
+    height:100vh;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,
+            rgb(97, 116, 122),
+            rgba(143, 179, 143, 1));;
+}
 
+.loader-card{
+    padding:40px 50px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.2);
+    text-align: center;
+    color:white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.spinner{
+    width:50px;
+    height:50px;
+    margin:0 auto 20px;
+    border:5px solid rgba(255,255,255,0.3);
+    border-top: 5px solid rgb(187, 248, 129);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
 /* Responsive: collapse nav on small screens */
 @media (max-width: 700px) {
     .game-area {
