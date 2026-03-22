@@ -1,5 +1,5 @@
 export async function getBotMove(board, difficulty) {
-  const res = await fetch("http://localhost:5000/api/bot/move", {
+  const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/bot/move`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ board, difficulty })
@@ -9,7 +9,7 @@ export async function getBotMove(board, difficulty) {
 }
 
 export async function checkGame(board) {
-  const res = await fetch("http://localhost:5000/api/bot/check", {
+  const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/bot/check`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ board })

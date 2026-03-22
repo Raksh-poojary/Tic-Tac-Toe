@@ -1,5 +1,5 @@
 export async function registerUser(username, password) {
-    const res = await fetch("http://localhost:5000/api/user/register", {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password })
@@ -9,7 +9,7 @@ export async function registerUser(username, password) {
 }
 
 export async function restoreUser(username, password) {
-    const res = await fetch("http://localhost:5000/api/user/restore", {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/restore`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password })
@@ -21,7 +21,7 @@ export async function restoreUser(username, password) {
 export async function autoSave(user, xScore, oScore) {
     if (!user) return;
 
-    await fetch("http://localhost:5000/api/user/save", {
+    await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/save`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...user, xScore, oScore })

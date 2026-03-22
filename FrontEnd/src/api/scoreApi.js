@@ -2,7 +2,7 @@ export async function saveScore(xScore, oScore) {
     const username = prompt("Username:");
     const password = prompt("Password:");
 
-    const res = await fetch("http://localhost:5000/api/score/save", {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/score/save`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password, xScore, oScore })
@@ -15,7 +15,7 @@ export async function restoreScore() {
     const username = prompt("Username:");
     const password = prompt("Password:");
 
-    const res = await fetch("http://localhost:5000/api/score/restore", {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/score/restore`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password })
