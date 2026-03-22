@@ -12,7 +12,7 @@ function App() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            fetch("http://localhost:5000/api/user/health")
+            fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/health`)
                 .then(() => {
                     setBackendReady(true);
                     clearInterval(interval);

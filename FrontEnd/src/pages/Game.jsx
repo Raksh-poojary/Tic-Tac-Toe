@@ -27,7 +27,7 @@ function Game(modes) {
     const [difficulty, setDifficulty] = useState("medium");
 
     useEffect(() => {
-        const socket = io("http://localhost:5000");
+        const socket = io(import.meta.env.VITE_BACKEND_URL);
         
         socket.on("connect", () => {
             console.log("Connected to server with ID:", socket.id);
