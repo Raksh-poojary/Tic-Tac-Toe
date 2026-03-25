@@ -13,8 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// mongoose.connect(process.env.MONGO_URI);
-mongoose.connect("mongodb://127.0.0.1:27017/tictactoe");
+mongoose.connect(process.env.MONGO_URI);
 
 app.use("/api/user", scoreRoutes);
 app.use("/api/bot", botRoutes);
