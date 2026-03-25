@@ -72,8 +72,4 @@ npm run dev
 
 ---
 
-##  Live Demo
-
-* Frontend: https://your-app.vercel.app
-* Backend: https://your-backend.onrender.com
 
