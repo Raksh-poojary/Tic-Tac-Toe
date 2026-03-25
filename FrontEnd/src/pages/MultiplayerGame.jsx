@@ -113,27 +113,29 @@ function MultiplayerGame() {
             <h1>You are: {player}</h1>
             <h1>Turn: {currentPlayer}</h1>
             <div className="mult">
-                <div className="container">
-                    {board.map((val, i) => (
-                        <button
-                            key={i}
-                            className="box"
-                            onClick={() => handleClick(i)}
-                            style={{
-                                backgroundColor:
-                                    val === "X"
-                                        ? "lightblue"
-                                        : val === "O"
-                                            ? "lightgreen"
-                                            : ""
-                            }}
-                        >
-                            {val}
-                        </button>
-                    ))}
-                </div>
+                <div className="game-area">
+                    <div className="container">
+                        {board.map((val, i) => (
+                            <button
+                                key={i}
+                                className="box"
+                                onClick={() => handleClick(i)}
+                                style={{
+                                    backgroundColor:
+                                        val === "X"
+                                            ? "lightblue"
+                                            : val === "O"
+                                                ? "lightgreen"
+                                                : ""
+                                }}
+                            >
+                                {val}
+                            </button>
+                        ))}
+                    </div>
 
-                <ScoreBoard xScore={xScore} oScore={oScore} mode={"online"} />
+                    <ScoreBoard xScore={xScore} oScore={oScore} mode={"online"} />
+                </div>
             </div>
 
             {/* RESULT POPUP */}

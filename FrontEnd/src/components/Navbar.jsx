@@ -5,6 +5,14 @@ function Navbar({ mode, setMode, difficulty, setDifficulty, openRegister, openRe
         <nav className="topbar">
             <div className="mode-boxes">
                 <button
+                    className="mode"
+                    onClick={() => {
+                        navigate("/");
+                    }}
+                >
+                    Home
+                </button>
+                <button
                     className={`mode ${mode === "double" ? "active" : ""}`}
                     onClick={() => {
                         setMode("double");

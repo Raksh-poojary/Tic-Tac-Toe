@@ -372,13 +372,6 @@ input:focus {
     display: flex;
     justify-content: center;
 }
-.game-areas{
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
-}
-
 .landing-mult{
     height: 100vh;
     display: flex;
@@ -461,18 +454,5 @@ input:focus {
     }
     .landing-buttons button{
         width:100%;
-    }
-    .game-areas{
-        flex-direction: column;
-        gap:20px;
-    }
-    .game-areas .container{
-        width: 100%;
-        max-width: 350px;
-    }
-     .table {
-        margin-left: 0;
-        width:90%;
-        max-width:250px;
     }
 }
